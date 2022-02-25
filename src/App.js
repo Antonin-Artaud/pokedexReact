@@ -16,8 +16,9 @@ function App() {
         <Header language={language} setLanguage={setLanguage}/>
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<PokemonList pokemon={pokemon} setPokemon={setPokemon} language={language}/>} />
-                <Route path="PokemonDetails/:pokemonId" element={<PokemonCard language={language}/>}/>
+                <Route path="/" element={<PokemonList pokemon={pokemon} setPokemon={setPokemon} language={language}/>}>
+                    <Route path="PokemonDetails/:pokemonId" element={<PokemonCard language={language}/>}/>
+                </Route>
             </Routes>
         </BrowserRouter>
     </div>

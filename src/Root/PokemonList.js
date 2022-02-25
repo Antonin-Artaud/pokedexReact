@@ -1,6 +1,7 @@
-import {Grid} from "@mui/material";
+import {Dialog, Grid, Modal} from "@mui/material";
 import PokemonsCard from "./PokemonsCard";
 import SearchBar from "./SearchBar";
+import {Outlet} from "react-router-dom";
 
 export function PokemonList({pokemon, setPokemon, language}) {
     return (
@@ -9,6 +10,7 @@ export function PokemonList({pokemon, setPokemon, language}) {
             <Grid container rowSpacing={3} columnSpacing={3}>
                 <PokemonsCard pokemonSearched={pokemon} language={language}/>
             </Grid>
+            <Outlet />
         </div>
     )
 }
